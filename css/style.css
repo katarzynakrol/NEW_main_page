@@ -1,0 +1,506 @@
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PoiretOne-Regular';
+    src: url('../fonts/PoiretOne-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ScopeOne-Regular';
+    src: url('../fonts/ScopeOne-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Limelight-Regular';
+    src: url('../fonts/Limelight-Regular.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+h3 {
+    color: rgba(0, 0, 0, .07);
+    font-weight: 600;
+    font-size: 4em;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 70px;
+    margin-top: 60px;
+    width: 200px;
+    height: 40px;
+    background-image: url('../images/divider.jpg');
+    background-repeat: no-repeat;
+    background-size: 200px;
+}
+
+p {
+    font-family: 'ScopeOne-Regular';
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* HEADER SECTION */
+
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272727;
+}
+
+nav li {
+    float: left;
+    list-style: none;
+}
+
+nav a {
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #FFD21E;
+    font-family: 'Montserrat-Regular';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    animation: show 2s;
+}
+
+.animation a {
+    animation: show2 2.5s;
+}
+
+@keyframes show2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav a:hover,
+nav a:active {
+    letter-spacing: 4px;
+}
+
+.fixedNavbar {
+    position: fixed;
+    z-index: 100;
+    height: 30px;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px 0;
+    background-color: rgba(39, 39, 39, 0.8);
+    animation: moveFromBottom 500ms;
+}
+
+@keyframes moveFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+header {
+    height: 700px;
+    background-color: #272727;
+    font-family: 'Limelight-Regular';
+}
+
+header hgroup {
+    position: relative;
+    top: 25%;
+    text-align: center;
+    color: #FFD21E;
+}
+
+header hgroup h1 {
+    font-size: 4em;
+}
+
+header hgroup h2 {
+    font-size: 2em;
+}
+
+header form {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30%;
+}
+
+header button {
+    cursor: pointer;
+    background-color: transparent;
+    color: #FFD21E;
+    border: 1px solid #FFD21E;
+    padding: 10px 30px;
+    font-family: 'ScopeOne-Regular';
+    font-size: 1em;
+}
+
+header button:hover {
+    box-shadow: 0 0 5px 3px rgba(255, 210, 30, 0.5);
+}
+
+
+/* END OF HEADER SECTION */
+
+
+/* ABOUT ME SECTION */
+
+.aboutMe {
+    background-image: url('../images/pattern-light.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 900px;
+}
+
+.aboutMe section {
+    position: relative;
+    z-index: 10;
+    width: 700px;
+    height: 900px;
+    margin: 0 auto;
+    padding: 60px 110px;
+    top: -100px;
+    background-color: #FFF;
+}
+
+.aboutMe section p,
+.mySkills ul {
+    margin: 40px 0;
+}
+
+.aboutMe section mark {
+    background-color: rgba(252, 210, 1, 0.7);
+}
+
+.mySkills ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySkills li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 20px;
+    background-color: #f5f5f5;
+    color: #b3b3b3;
+    border-radius: 20px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.myProfiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 50;
+    top: -320px;
+    margin: 0 auto;
+    width: 500px;
+    height: 230px;
+    background-color: #272727;
+    border: 10px solid #fff;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .26), 0 14px 28px 0 rgba(0, 0, 0, .25);
+    text-align: center;
+}
+
+.myProfiles img {
+    width: 120px;
+}
+
+.myProfiles .linkedIn {
+    padding-left: 70px;
+    text-decoration: none;
+}
+
+.myProfiles .gitHub {
+    border-right: 1px solid #b3b3b3;
+    padding-right: 55px;
+}
+
+.myProfiles figcaption {
+    font-family: 'ScopeOne-Regular';
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #FFD21E;
+}
+
+.linkedIn:hover,
+.gitHub:hover {
+    color: #fff;
+}
+
+
+/* END OF ABOUT ME SECTION */
+
+
+/* QUOT SECTION */
+
+aside {
+    position: relative;
+    z-index: 20;
+    height: 300px;
+    background-color: #272727;
+}
+
+aside p {
+    position: relative;
+    z-index: 10;
+    width: 800px;
+    margin: 0 auto;
+    top: 38%;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: 'PoiretOne-Regular';
+    color: #fff;
+}
+
+
+/* END OF QUOT SECTION */
+
+
+/* PORTFOLIO SECTION */
+
+.portfolio {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 40px;
+    position: relative;
+}
+
+.portfolio h3 {
+    margin-bottom: 40px;
+}
+
+.portfolio h3:after {
+    left: -40px;
+}
+
+.portfolioPart1 div,
+.portfolioPart2 div {
+    width: 31%;
+    height: 300px;
+    display: inline-block;
+    margin: 0 5px 70px 5px;
+    border: 1px solid #222;
+}
+
+.portfolioPart1 img,
+.portfolioPart2 img {
+    width: 100%;
+}
+
+.portfolioPart1 ul,
+.portfolioPart2 ul {
+    width: 150px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+    bottom: -17.5px;
+    background-color: #fff;
+}
+
+.portfolioPart2 div:last-child {
+    position: relative;
+    top: -41px;
+}
+
+.portfolioPart2 div:last-child ul {
+    bottom: -36px;
+}
+
+.portfolioPart1 li,
+.portfolioPart2 li {
+    margin: 5px 0;
+    padding: 10px 5px;
+    list-style: none;
+    border: 1px solid #222;
+    text-align: center;
+    font-family: 'Montserrat-Regular';
+    text-transform: uppercase;
+    color: #222;
+    letter-spacing: 1px;
+    font-size: 0.7em;
+    cursor: pointer;
+}
+
+.portfolioPart1 li:hover,
+.portfolioPart2 li:hover {
+    box-shadow: 0 0 5px 3px rgba(34, 34, 34, 0.5);
+}
+
+.portfolioPart2 div {
+    margin-bottom: 70px;
+}
+
+
+/* END OF PORTFOLIO SECTION */
+
+
+/* CONTACT SECTION */
+
+.contact {
+    position: relative;
+    top: 50px;
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    background: linear-gradient(to right, #FFD21E 0, rgb(252, 255, 103) 100%);
+}
+
+.contact h4 {
+    position: relative;
+    width: 270px;
+    top: -45px;
+    left: 20px;
+    color: #222;
+    font-weight: 600;
+    font-size: 5em;
+}
+
+.messageSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.myData {
+    width: 355px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.myData p {
+    margin-bottom: 30px;
+}
+
+.myData a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Limelight-Regular';
+    font-size: 2em;
+}
+
+.form {
+    display: inline-grid;
+    width: 422px;
+    margin: 0 auto;
+}
+
+.form label,
+.form input,
+.form textarea,
+.form button {
+    margin: 5px 0;
+    font-family: 'Montserrat-Regular';
+    color: #222;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+}
+
+.form input,
+.form textarea {
+    width: 400px;
+    padding: 10px;
+}
+
+.form label,
+.form button {
+    text-transform: uppercase;
+}
+
+.buttons {
+    width: 233px;
+    margin: 0 auto;
+}
+
+.form button {
+    cursor: pointer;
+    border: 1px solid #222;
+    width: 100px;
+    margin: 10px 7px;
+    padding: 5px 0;
+    background-color: transparent;
+}
+
+.form button:hover {
+    box-shadow: 0 0 5px 3px rgba(34, 34, 34, 0.5);
+}
+
+
+/* END OF CONTACT SECTION */
+
+
+/* FOOTER SECTION */
+
+footer {
+    position: relative;
+    bottom: -70px;
+    text-align: center;
+    color: #222;
+    font-family: 'ScopeOne-Regular';
+}
+
+
+/* GO TO TOP BUTTON */
+
+.top {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    padding: 7px 12px 10px 12px;
+    margin: 0 10px 10px 0;
+    background-color: rgba(39, 39, 39, 0.8);
+    color: #fff;
+    cursor: pointer;
+}
+
+.top:hover {
+    opacity: 0.8;
+}
+
+.animationEffect {
+    animation-name: animationEffect;
+    animation-duration: 1s;
+    visibility: visible;
+}
+
+@keyframes animationEffect {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

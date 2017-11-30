@@ -1,0 +1,393 @@
+    
+    @media only screen and (max-width: 350px) {
+        h3 {
+            font-size: 2em;
+        }
+        h3::after {
+            left: 0;
+            margin-top: 30px;
+            width: 150px;
+            background-size: 150px;
+        }
+    }
+
+    @media only screen and (min-width: 350px) and (max-width: 500px) {
+        h3 {
+            font-size: 2em;
+        }
+        h3::after {
+            left: 20px;
+            margin-top: 30px;
+            width: 150px;
+            background-size: 150px;
+        }
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 700px) {
+        h3 {
+            font-size: 3em;
+        }
+        h3::after {
+            left: 10px;
+            margin-top: 40px;
+        }
+    }
+    /* HEADER SECTION */
+    /* top navigation */
+
+    @media only screen and (max-width: 350px) {
+        nav {
+            height: 20px;
+        }
+        nav a {
+            font-size: 0.5em;
+            padding: 10px 5px;
+        }
+        nav a:hover,
+        nav a:active {
+            letter-spacing: 2px;
+        }
+    }
+
+    @media only screen and (min-width: 350px) and (max-width: 480px) {
+        nav {
+            height: 30px;
+        }
+        nav a {
+            font-size: 0.6em;
+            padding: 10px 7px;
+        }
+        nav a:hover,
+        nav a:active {
+            letter-spacing: 2px;
+        }
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 660px) {
+        nav a {
+            padding: 10px 20px;
+        }
+    }
+    /* header section */
+
+    @media only screen and (max-width: 460px) {
+        header {
+            height: 450px;
+        }
+        header hgroup h1 {
+            font-size: 2em;
+        }
+        header hgroup h2 {
+            font-size: 1em;
+        }
+        header button {
+            padding: 6px 15px;
+            font-size: 1em;
+        }
+        header hgroup {
+            top: 32%;
+        }
+        header form {
+            top: 37%;
+        }
+    }
+
+    @media only screen and (min-width: 460px) and (max-width: 600px) {
+        header hgroup h1 {
+            font-size: 3em;
+        }
+        header hgroup h2 {
+            font-size: 1.5em;
+        }
+    }
+
+    @media only screen and (min-width: 460px) and (max-width: 900px) {
+        header {
+            height: 550px;
+        }
+        header hgroup {
+            top: 30%;
+        }
+        header form {
+            top: 35%;
+        }
+    }
+    /* ABOUT ME SECTION */
+
+    @media only screen and (max-width: 350px) {
+        .aboutMe section {
+            padding: 30px 20px 0 20px;
+        }
+        .aboutMe section p,
+        .mySkills ul {
+            margin: 20px 0;
+        }
+    }
+
+    @media only screen and (min-width: 350px) and (max-width: 700px) {
+        .aboutMe section {
+            padding: 30px 60px 0 60px;
+        }
+        .aboutMe section p,
+        .mySkills ul {
+            margin: 25px 0;
+        }
+    }
+
+    @media only screen and (min-width: 700px) and (max-width: 900px) {
+        .aboutMe section {
+            padding: 60px 110px 0 110px;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .aboutMe {
+            height: 100%;
+            background-image: none;
+        }
+        .aboutMe section {
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            top: 0;
+        }
+    }
+    /* my skills section */
+
+    @media only screen and (max-width: 480px) {
+        .mySkills .list {
+            width: 240px;
+            margin: 0 auto;
+        }
+        .mySkills ul {
+            display: inline-grid;
+        }
+        .mySkills li {
+            margin: 5px 0;
+        }
+    }
+    /* my profiles section */
+
+    @media only screen and (max-width: 450px) {
+        .myProfiles {
+            width: 250px;
+            height: 110px;
+        }
+        .myProfiles img {
+            width: 50px;
+        }
+        .myProfiles .linkedIn {
+            padding-left: 45px;
+        }
+        .myProfiles .gitHub {
+            padding-right: 30px;
+        }
+        .myProfiles figcaption {
+            font-size: 0.8em;
+        }
+    }
+
+    @media only screen and (min-width: 450px) and (max-width: 700px) {
+        .myProfiles {
+            width: 400px;
+            height: 180px;
+        }
+        .myProfiles img {
+            width: 90px;
+        }
+        .myProfiles .linkedIn {
+            padding-left: 60px;
+        }
+        .myProfiles .gitHub {
+            padding-right: 45px;
+        }
+        .myProfiles figcaption {
+            font-size: 1.1em;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .myProfiles {
+            top: 0;
+            margin-bottom: 30px;
+        }
+    }
+    /* QUOT SECTION */
+
+    @media only screen and (max-width: 600px) {
+        aside {
+            height: 250px;
+        }
+        aside p {
+            font-size: 1.3em;
+        }
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 900px) {
+        aside p {
+            font-size: 1.6em;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        aside {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        aside p {
+            top: 0;
+            width: 80%;
+        }
+    }
+    /* PORTFOLIO SECTION */
+
+    @media only screen and (max-width: 370px) {
+        .portfolio h3 {
+            margin-left: 15px;
+            font-size: 1.7em;
+        }
+        .portfolio h3:after {
+            left: 0;
+            margin-top: 30px;
+            width: 120px;
+            background-size: 120px;
+        }
+    }
+
+    @media only screen and (min-width: 370px) and (max-width: 1064px) {
+        .portfolio h3 {
+            margin-left: 40px;
+        }
+        .portfolio h3:after {
+            left: 0;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .portfolioPart1 div,
+        .portfolioPart2 div {
+            width: 250px;
+            height: 250px;
+        }
+        .portfolioPart1 ul,
+        .portfolioPart2 ul {
+            width: 110px;
+            bottom: -18px;
+        }
+        .portfolioPart1 li,
+        .portfolioPart2 li {
+            padding: 8px 5px;
+            font-size: 0.6em;
+        }
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 795px) {
+        .portfolioPart1 div,
+        .portfolioPart2 div {
+            width: 310px;
+        }
+    }
+
+    @media only screen and (max-width: 795px) {
+        .portfolio {
+            width: auto;
+        }
+        .portfolioPart1,
+        .portfolioPart2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .portfolioPart1 div,
+        .portfolioPart2 div {
+            display: block;
+        }
+        .portfolioPart2 div:last-child {
+            top: 0;
+        }
+    }
+
+    @media only screen and (min-width: 795px) and (max-width: 1000px) {
+        .portfolio {
+            width: 793px;
+        }
+        .portfolioPart1 div,
+        .portfolioPart2 div {
+            width: 250px;
+            height: 250px;
+        }
+        .portfolioPart2 div:last-child {
+            top: -34px;
+        }
+        .portfolioPart1 ul,
+        .portfolioPart2 ul {
+            width: 110px;
+            bottom: -18px;
+        }
+        .portfolioPart1 li,
+        .portfolioPart2 li {
+            padding: 8px 5px;
+            font-size: 0.6em;
+        }
+    }
+    /* CONTACT SECTION */
+
+    @media only screen and (max-width: 470px) {
+        .contact h4 {
+            width: 200px;
+            font-size: 4em;
+        }
+        .myData,
+        .form,
+        .form input,
+        .form textarea {
+            width: 250px;
+            box-sizing: border-box;
+        }
+        .myData a {
+            text-align: center;
+            font-size: 1.34em;
+        }
+    }
+
+    @media only screen and (max-width: 750px) {
+        .messageSection {
+            display: flex;
+            flex-direction: column;
+        }
+        .myData {
+            padding-top: 0;
+        }
+        .form {
+            margin-top: 30px;
+        }
+        .form label {
+            text-align: center;
+        }
+    }
+
+    @media only screen and (min-width: 750px) and (max-width: 900px) {
+        .myData {
+            width: 290px;
+            padding-top: 10px;
+        }
+        .myData p {
+            margin-bottom: 10px;
+        }
+        .myData a {
+            font-size: 1.6em;
+        }
+        .form,
+        .form input,
+        .form textarea {
+            width: 350px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .contact {
+            width: auto;
+        }
+    }
