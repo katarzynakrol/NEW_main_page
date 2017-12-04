@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Katarzyna Król</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/mediaQueries.css" rel="stylesheet">
-    <script src="js/script.js"></script>
+    <link href="dist/style.min.css" rel="stylesheet">
+    <script src="dist/min.js"></script>
 </head>
 
 <body>
@@ -118,7 +117,9 @@
                     <a href="https://github.com/katarzynakrol/tic_tac_toe">
                         <li>Repozytorium</li>
                     </a>
-                    <li>Idź na stronę</li>
+                    <a href="../ticTacToe">
+                        <li>Idź na stronę</li>
+                    </a>
                 </ul>
             </div>
             <div>
@@ -127,7 +128,9 @@
                     <a href="https://github.com/katarzynakrol/coffeehouse">
                         <li>Repozytorium</li>
                     </a>
-                    <li>Idź na stronę</li>
+                    <a href="../coffeehouse">
+                        <li>Idź na stronę</li>
+                    </a>
                 </ul>
             </div>
             <div>
@@ -136,7 +139,9 @@
                     <a href="https://github.com/katarzynakrol/ice_people_fanpage">
                         <li>Repozytorium</li>
                     </a>
-                    <li>Idź na stronę</li>
+                    <a href="../icePeopleFanpage">
+                        <li>Idź na stronę</li>
+                    </a>
                 </ul>
             </div>
         </div>
@@ -148,7 +153,9 @@
                     <a href="https://github.com/katarzynakrol/example_page_1">
                         <li>Repozytorium</li>
                     </a>
-                    <li>Idź na stronę</li>
+                    <a href="../webpage1">
+                        <li>Idź na stronę</li>
+                    </a>
                 </ul>
             </div>
             <div>
@@ -157,7 +164,9 @@
                     <a href="https://github.com/katarzynakrol/shopping_list_js">
                         <li>Repozytorium</li>
                     </a>
-                    <li>Idź na stronę</li>
+                    <a href="../shoppingList">
+                        <li>Idź na stronę</li>
+                    </a>
                 </ul>
             </div>
             <div>
@@ -166,7 +175,9 @@
                     <a href="https://github.com/katarzynakrol/example_page_2">
                         <li>Repozytorium</li>
                     </a>
-                    <li>Idź na stronę</li>
+                    <a href="../webpage2">
+                        <li>Idź na stronę</li>
+                    </a>
                 </ul>
             </div>
             <div>
@@ -175,7 +186,9 @@
                     <a href="https://github.com/katarzynakrol/example_page_3">
                         <li>Repozytorium</li>
                     </a>
-                    <li>Idź na stronę</li>
+                    <a href="../webpage3">
+                        <li>Idź na stronę</li>
+                    </a>
                 </ul>
             </div>
             <div>
@@ -184,7 +197,9 @@
                     <a href="https://github.com/katarzynakrol/example_page_js">
                         <li>Repozytorium</li>
                     </a>
-                    <li>Idź na stronę</li>
+                    <a href="../kittens">
+                        <li>Idź na stronę</li>
+                    </a>
                 </ul>
             </div>
             <div>
@@ -211,13 +226,13 @@
                     armatys.k@gmail.com
                 </a>
             </div>
-            <form class="form" action="" method="post">
+            <form id="contactForm" class="form" action="/main" method="post">
                 <label>
                     formularz kontaktowy
                 </label>
-                <input name="name" type="text" placeholder="Imię i nazwisko">
-                <input name="email" type="email" placeholder="E-mail">
-                <textarea name="text" placeholder="Wiadomość"></textarea>
+                <input id="nameField" name="name" type="text" placeholder="Imię i nazwisko">
+                <input id="emailField" name="email" type="email" placeholder="E-mail">
+                <textarea id="descField" name="text" placeholder="Wiadomość"></textarea>
                 <div class="buttons">
                     <button type="submit">
                         Wyślij
@@ -234,7 +249,7 @@
         &copy; 2017 Katarzyna Król
     </footer>
     <div class="top" id="topBtn">
-            &#8896;
+        &#8896;
     </div>
 </body>
 

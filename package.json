@@ -1,0 +1,25 @@
+{
+  "name": "new-main-webpage-with-gulp",
+  "version": "1.0.0",
+  "description": "This is the main webpage of my frontend portfolio that serves as a hub to my other works.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Katarzyna Krol",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp-concat": "^2.6.1"
+  }
+}
