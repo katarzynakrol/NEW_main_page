@@ -1,4 +1,3 @@
-    
     @media only screen and (max-width: 350px) {
         h3 {
             font-size: 2em;
@@ -156,7 +155,7 @@
 
     @media only screen and (max-width: 480px) {
         .mySkills .list {
-            width: 241px;
+            width: 242px;
             margin: 0 auto;
         }
         .mySkills ul {
@@ -311,7 +310,7 @@
 
     @media only screen and (min-width: 795px) and (max-width: 1000px) {
         .portfolio {
-            width: 793px;
+            width: 786px;
         }
         .portfolioPart1 div,
         .portfolioPart2 div {
@@ -319,7 +318,7 @@
             height: 250px;
         }
         .portfolioPart2 div:last-child {
-            top: -34px;
+            top: -34.5px;
         }
         .portfolioPart1 ul,
         .portfolioPart2 ul {
@@ -341,6 +340,7 @@
         }
         .myData,
         .form,
+        .form label,
         .form input,
         .form textarea {
             width: 250px;
@@ -380,6 +380,7 @@
             font-size: 1.6em;
         }
         .form,
+        .form label,
         .form input,
         .form textarea {
             width: 350px;
