@@ -389,8 +389,7 @@ aside p {
 }
 
 .messageSection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
 }
 
 .myData {
@@ -479,7 +478,7 @@ footer {
     z-index: 1000;
     bottom: 0;
     right: 0;
-    padding: 7px 12px 10px 12px;
+    padding: 7px 13px 10px 13px;
     margin: 0 10px 10px 0;
     background-color: rgba(39, 39, 39, 0.8);
     color: #fff;
