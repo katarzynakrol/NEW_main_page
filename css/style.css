@@ -308,10 +308,10 @@ aside p {
 
 .portfolioPart1 div,
 .portfolioPart2 div {
-    width: 31%;
+    width: 31.5%;
     height: 300px;
     display: inline-block;
-    margin: 0 5px 70px 5px;
+    margin: 0 0.5% 70px 0.5%;
     border: 1px solid #222;
 }
 
@@ -389,8 +389,7 @@ aside p {
 }
 
 .messageSection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
 }
 
 .myData {
@@ -439,8 +438,8 @@ aside p {
 }
 
 .buttons {
-    width: 233px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .form button {
@@ -479,7 +478,7 @@ footer {
     z-index: 1000;
     bottom: 0;
     right: 0;
-    padding: 7px 12px 10px 12px;
+    padding: 7px 13px 10px 13px;
     margin: 0 10px 10px 0;
     background-color: rgba(39, 39, 39, 0.8);
     color: #fff;
