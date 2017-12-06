@@ -156,14 +156,15 @@
 
     @media only screen and (max-width: 480px) {
         .mySkills .list {
-            width: 240px;
+            width: 241px;
             margin: 0 auto;
         }
         .mySkills ul {
-            display: inline-grid;
+            display: grid;
+            float: left;
         }
         .mySkills li {
-            margin: 5px 0;
+            margin: 5px 2px;
         }
     }
     /* my profiles section */
