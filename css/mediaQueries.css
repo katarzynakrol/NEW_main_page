@@ -155,15 +155,21 @@
 
     @media only screen and (max-width: 480px) {
         .mySkills .list {
-            width: 242px;
+            width: 150px;
             margin: 0 auto;
         }
         .mySkills ul {
-            display: grid;
-            float: left;
+            display: block;
         }
         .mySkills li {
+            display: block;
             margin: 5px 2px;
+        }
+        .list ul:first-child {
+            margin-bottom: 0px;
+        }
+        .list ul:last-child {
+            margin-top: 0px;
         }
     }
     /* my profiles section */
