@@ -230,14 +230,19 @@
                 <label>
                     formularz kontaktowy
                 </label>
-                <input id="nameField" name="name" type="text" placeholder="Imię i nazwisko">
-                <input id="emailField" name="email" type="email" placeholder="E-mail">
-                <textarea id="descField" name="text" placeholder="Wiadomość"></textarea>
+                <input id="nameField" name="name" type="text" placeholder="Imię i nazwisko" maxlength="64">
+                <span id="nameTip"></span>
+                <input id="emailField" name="email" placeholder="E-mail" maxlength="128">
+                <span id="emailTip"></span>
+                <textarea id="textField" name="text" placeholder="Wiadomość" maxlength="500"></textarea>
+                <span id="textTip"></span>
+                <p>
+                    <span id="counter">0</span> / 500</p>
                 <div class="buttons">
-                    <button type="submit">
+                    <button type="submit" id="send">
                         Wyślij
                     </button>
-                    <button type="reset">
+                    <button id="clearBtn" type="reset">
                         Wyczyść
                     </button>
                 </div>
