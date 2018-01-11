@@ -429,12 +429,25 @@ aside p {
 .form input,
 .form textarea {
     width: 400px;
+    resize: vertical;
     padding: 10px;
 }
 
 .form label,
 .form button {
     text-transform: uppercase;
+}
+
+.form span:not(:last-child) {
+    display: none;
+    font-family: 'ScopeOne-Regular';
+    font-size: 0.8em;
+    color: #e0211b;
+}
+
+.warning {
+    border: 1px solid #FE511C;
+    box-shadow: 0 1px 0 0 #e0211b;
 }
 
 .buttons {
