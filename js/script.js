@@ -37,46 +37,86 @@ window.onload = function check() {
     nameField.addEventListener('blur', checkNameField);
     emailField.addEventListener('blur', checkEmailField);
     textField.addEventListener('blur', checkTextField);
-    sendBtn.addEventListener('click', checkNameField);
-    sendBtn.addEventListener('click', checkEmailField);
-    sendBtn.addEventListener('click', checkTextField);
+    sendBtn.addEventListener('click', checkAllFields);
+    sendBtn.addEventListener('submit', checkAllFields);
     clearBtn.addEventListener('click', clearField);
     counter();
 }
 
-function checkNameField() {
+function checkAllFields(e) {
+    var checks = [];
+    checkNameField(checks);
+    checkEmailField(checks);
+    checkTextField(checks);
+    if (checks.includes(false) === false) {
+        submitForm();
+    } else {
+        stopForm(e);
+    }
+}
+
+/**
+ * This function prevents the form from being submitted.
+ */
+
+function stopForm(e) {
+    var contactForm = document.getElementById('contactForm');
+    e.preventDefault();
+}
+
+/**
+ * This function submits the form.
+ */
+
+function submitForm() {
+    var contactForm = document.getElementById('contactForm');
+    contactForm.submit();
+}
+
+function checkNameField(checks) {
     var nameFieldValue = nameField.value;
     var nameTip = document.getElementById('nameTip');
+    if (Array.isArray(checks) === false) {
+        checks = [];
+    }
     if (nameFieldValue === null || nameFieldValue === '' || nameFieldValue.search(/[a-z]+/i) === -1) {
         nameField.setAttribute('class', 'warning');
         nameTip.style.display = 'block';
         nameTip.innerHTML = 'Proszę wpisać imię i nazwisko';
-        return false;
+        checks.push(false);
+        return checks;
     } else {
         nameField.classList.remove('warning');
         nameTip.style.display = 'none';
-        return true;
+        checks.push(true);
+        return checks;
     }
 }
 
-function checkEmailField() {
+function checkEmailField(checks) {
     var reg = /^[-\w\.]+@([-\w]+\.)+[a-z]+$/i;
     var emailFieldValue = emailField.value;
     var emailTip = document.getElementById('emailTip');
+    if (Array.isArray(checks) === false) {
+        checks = [];
+    }
     if (emailFieldValue === null || emailFieldValue === '') {
         emailField.setAttribute('class', 'warning');
         emailTip.style.display = 'block';
         emailTip.innerHTML = 'Proszę wpisać adres e-mail';
-        return false;
+        checks.push(false);
+        return checks;
     } else if (reg.test(emailFieldValue)) {
         emailField.removeAttribute('class');
         emailTip.innerHTML = '';
-        return true;
+        checks.push(true);
+        return checks;
     } else {
         emailField.setAttribute('class', 'warning');
         emailTip.style.display = 'block';
         emailTip.innerHTML = 'Niepoprawny adres e-mail';
-        return false;
+        checks.push(false);
+        return checks;
     }
 }
 
@@ -92,18 +132,23 @@ function counter() {
     }
 }
 
-function checkTextField() {
+function checkTextField(checks) {
     var textFieldValue = textField.value;
     var textTip = document.getElementById('textTip');
+    if (Array.isArray(checks) === false) {
+        checks = [];
+    }
     if (textFieldValue === null || textFieldValue === '' || textFieldValue.search(/[a-z]+/i) === -1) {
         textField.setAttribute('class', 'warning');
         textTip.style.display = 'block';
         textTip.innerHTML = 'Proszę wpisać wiadomość';
-        return false;
+        checks.push(false);
+        return checks;
     } else {
         textField.classList.remove('warning');
         textTip.style.display = 'none';
-        return true;
+        checks.push(true);
+        return checks;
     }
 }
 
