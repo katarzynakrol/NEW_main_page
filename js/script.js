@@ -60,7 +60,6 @@ function checkAllFields(e) {
  */
 
 function stopForm(e) {
-    var contactForm = document.getElementById('contactForm');
     e.preventDefault();
 }
 
