@@ -1,5 +1,9 @@
 document.addEventListener('scroll', scrollNavbar);
 
+/**
+ * This function appends the menu to the top of the page when scrolling.
+ */
+
 function scrollNavbar() {
     var menu = document.getElementById('topNavbar');
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -12,6 +16,10 @@ function scrollNavbar() {
 }
 
 document.addEventListener('scroll', scrollToTop);
+
+/**
+ * This function makes scroll to top button visible when the user has scrolled the page down by a set value.
+ */
 
 function scrollToTop() {
     var topBtn = document.getElementById('topBtn');
@@ -28,6 +36,10 @@ function scrollToTop() {
     };
 }
 
+/**
+ * This function adds event listeners to given DOM elements. 
+ */
+
 window.onload = function check() {
     var sendBtn = document.getElementById('send');
     var clearBtn = document.getElementById('clearBtn');
@@ -42,6 +54,10 @@ window.onload = function check() {
     clearBtn.addEventListener('click', clearField);
     counter();
 }
+
+/**
+ * This function checks all form fields by triggering given validation functions.
+ */
 
 function checkAllFields(e) {
     var checks = [];
@@ -72,6 +88,10 @@ function submitForm() {
     contactForm.submit();
 }
 
+/**
+ * This function checks if the input from the name field passes the set validation.
+ */
+
 function checkNameField(checks) {
     var nameFieldValue = nameField.value;
     var nameTip = document.getElementById('nameTip');
@@ -91,6 +111,10 @@ function checkNameField(checks) {
         return checks;
     }
 }
+
+/**
+ * This function checks if the input from the e-mail field passes the set validation.
+ */
 
 function checkEmailField(checks) {
     var reg = /^[-\w\.]+@([-\w]+\.)+[a-z]+$/i;
@@ -119,6 +143,10 @@ function checkEmailField(checks) {
     }
 }
 
+/**
+ * This function counts the number of characters that have been inputted in the text field and displays that number to the user. 
+ */
+
 function counter() {
     var text = document.getElementById('textField');
     var counter = document.getElementById('counter');
@@ -130,6 +158,10 @@ function counter() {
         counter.innerHTML = '0';
     }
 }
+
+/**
+ * This function checks if the input from the text field passes the set validation.
+ */
 
 function checkTextField(checks) {
     var textFieldValue = textField.value;
@@ -150,6 +182,10 @@ function checkTextField(checks) {
         return checks;
     }
 }
+
+/**
+ * This function clears the form.
+ */
 
 function clearField() {
     nameField.removeAttribute('class');
