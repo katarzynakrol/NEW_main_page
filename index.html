@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Katarzyna Król</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.190.0.min.js"></script>
     <link href="dist/style.min.css" rel="stylesheet">
     <script src="dist/min.js"></script>
 </head>
@@ -117,7 +118,7 @@
                     <a href="https://github.com/katarzynakrol/tic_tac_toe">
                         <li>Repozytorium</li>
                     </a>
-                    <a href="../ticTacToe">
+                    <a href="./subpages/ticTacToe/index.html">
                         <li>Idź na stronę</li>
                     </a>
                 </ul>
@@ -128,7 +129,7 @@
                     <a href="https://github.com/katarzynakrol/coffeehouse">
                         <li>Repozytorium</li>
                     </a>
-                    <a href="../coffeehouse">
+                    <a href="./subpages/coffeehouse/index.html">
                         <li>Idź na stronę</li>
                     </a>
                 </ul>
@@ -139,7 +140,7 @@
                     <a href="https://github.com/katarzynakrol/ice_people_fanpage">
                         <li>Repozytorium</li>
                     </a>
-                    <a href="../icePeopleFanpage">
+                    <a href="./subpages/icePeopleFanpage/index.html">
                         <li>Idź na stronę</li>
                     </a>
                 </ul>
@@ -153,7 +154,7 @@
                     <a href="https://github.com/katarzynakrol/example_page_1">
                         <li>Repozytorium</li>
                     </a>
-                    <a href="../webpage1">
+                    <a href="./subpages/webpage1/index.html">
                         <li>Idź na stronę</li>
                     </a>
                 </ul>
@@ -164,7 +165,7 @@
                     <a href="https://github.com/katarzynakrol/shopping_list_js">
                         <li>Repozytorium</li>
                     </a>
-                    <a href="../shoppingList">
+                    <a href="./subpages/shoppingList/index.html">
                         <li>Idź na stronę</li>
                     </a>
                 </ul>
@@ -175,7 +176,7 @@
                     <a href="https://github.com/katarzynakrol/example_page_2">
                         <li>Repozytorium</li>
                     </a>
-                    <a href="../webpage2">
+                    <a href="./subpages/webpage2/index.html">
                         <li>Idź na stronę</li>
                     </a>
                 </ul>
@@ -186,7 +187,7 @@
                     <a href="https://github.com/katarzynakrol/example_page_3">
                         <li>Repozytorium</li>
                     </a>
-                    <a href="../webpage3">
+                    <a href="./subpages/webpage3/index.html">
                         <li>Idź na stronę</li>
                     </a>
                 </ul>
@@ -197,7 +198,7 @@
                     <a href="https://github.com/katarzynakrol/example_page_js">
                         <li>Repozytorium</li>
                     </a>
-                    <a href="../kittens">
+                    <a href="./subpages/kittens/index.html">
                         <li>Idź na stronę</li>
                     </a>
                 </ul>
@@ -222,22 +223,27 @@
                     się przywitać, napisz do mnie e-maila lub wyślij formularz znajdujący się obok.
                     <br>Z wielką chęcią odpowiem na Twoją wiadomość!
                 </p>
-                <a href="mailto:armatys.k@gmail.com" title="Napisz do mnie">
+                <a href="armatys.k@gmail.com" title="Napisz do mnie">
                     armatys.k@gmail.com
                 </a>
             </div>
-            <form id="contactForm" class="form" action="/main" method="post">
+            <form id="contactForm" class="form">
                 <label>
                     formularz kontaktowy
                 </label>
-                <input id="nameField" name="name" type="text" placeholder="Imię i nazwisko">
-                <input id="emailField" name="email" type="email" placeholder="E-mail">
-                <textarea id="descField" name="text" placeholder="Wiadomość"></textarea>
+                <input id="nameField" name="name" type="text" placeholder="Imię i nazwisko" maxlength="64">
+                <span id="nameTip"></span>
+                <input id="emailField" name="email" placeholder="E-mail" maxlength="128">
+                <span id="emailTip"></span>
+                <textarea id="textField" name="text" placeholder="Wiadomość" maxlength="500"></textarea>
+                <span id="textTip"></span>
+                <p>
+                    <span id="counter">0</span> / 500</p>
                 <div class="buttons">
-                    <button type="submit">
+                    <button type="button" id="send">
                         Wyślij
                     </button>
-                    <button type="reset">
+                    <button id="clearBtn" type="reset">
                         Wyczyść
                     </button>
                 </div>
